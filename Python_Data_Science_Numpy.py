@@ -27,63 +27,32 @@
 
 # ### Verificando versão
 
-# In[ ]:
-
 
 get_ipython().system('python -V')
 
 
 # # 1.3 Trabalhando com arrays Numpy
 
-# In[ ]:
-
 
 import numpy as np
 
 
-# In[ ]:
-
-
 km = np.loadtxt('carros-km.txt')
-
-
-# In[ ]:
-
 
 km
 
-
-# In[ ]:
-
-
 anos = np.loadtxt('carros-anos.txt', dtype = int)
-
-
-# In[ ]:
-
 
 anos
 
-
 # ### Obtendo a quilometragem média por ano
-
-# In[ ]:
-
 
 km_media = km / (2019 - anos)
 
 
-# In[ ]:
-
-
 km_media
 
-
-# In[ ]:
-
-
 type(km_media)
-
 
 # # <font color=green> 2. CARACTERÍSTICAS BÁSICAS DA LINGUAGEM
 # ---
@@ -94,24 +63,15 @@ type(km_media)
 
 # ### Adição ($+$)
 
-# In[ ]:
-
-
 2 + 2
 
 
 # ### Subtração ($-$)
 
-# In[ ]:
-
-
 2 - 2
 
 
 # ### Multiplicação ($*$)
-
-# In[ ]:
-
 
 2 * 3
 
@@ -119,56 +79,27 @@ type(km_media)
 # ### Divisão ($/$) e ($//$)
 # A operação divisão sempre retorna um número de ponto flutuante
 
-# In[ ]:
-
-
 10 / 3
-
-
-# In[ ]:
-
 
 10 // 3
 
-
 # ### Exponenciação ($**$)
-
-# In[ ]:
-
 
 2 ** 3
 
 
 # ### Resto da divisão ($\%$)
 
-# In[ ]:
-
-
 10 % 3
-
-
-# In[ ]:
-
 
 10 % 2
 
 
 # ### Expressões matemáticas
 
-# In[ ]:
-
-
 5 * 2 + 3 * 2
 
-
-# In[ ]:
-
-
 (5 * 2) + (3 * 2)
-
-
-# In[ ]:
-
 
 5 * (2 + 3) * 2
 
@@ -177,23 +108,11 @@ type(km_media)
 # 
 # No modo interativo, o último resultado impresso é atribuído à variável _
 
-# In[ ]:
-
-
 5 * 2
-
-
-# In[ ]:
-
 
 _ + 3 * 2
 
-
-# In[ ]:
-
-
 _ / 2
-
 
 # # 2.2 Variáveis 
 
@@ -239,31 +158,15 @@ _ / 2
 # 
 # ### Operadores de atribuição: $=$, $+=$, $-=$, $*=$, $/=$, $**=$, $\%=$, $//=$
 
-# In[ ]:
-
-
 ano_atual = 2019
 ano_fabricacao = 2003
 km_total = 44410.0
 
-
-# In[ ]:
-
-
 ano_atual
-
-
-# In[ ]:
-
 
 ano_fabricacao
 
-
-# In[ ]:
-
-
 km_total
-
 
 # # $$km_{média} = \frac {km_{total}}{(Ano_{atual} - Ano_{fabricação})}$$
 
@@ -271,23 +174,14 @@ km_total
 
 # In[ ]:
 
-
 km_media = km_total / (ano_atual - ano_fabricacao)
 km_media
-
-
-# In[ ]:
-
 
 ano_atual = 2019
 ano_fabricacao = 2003
 km_total = 44410.0
 km_media = km_total / (ano_atual - ano_fabricacao)
 km_media
-
-
-# In[ ]:
-
 
 ano_atual = 2019
 ano_fabricacao = 2003
@@ -296,9 +190,6 @@ km_media = km_total / (ano_atual - ano_fabricacao)
 
 km_total = km_total + km_media
 km_total
-
-
-# In[ ]:
 
 
 ano_atual = 2019
@@ -317,32 +208,14 @@ km_total
 
 # ### Declaração múltipla
 
-# In[ ]:
-
-
 ano_atual, ano_fabricacao, km_total = 2019, 2003, 44410.0
-
-
-# In[ ]:
 
 
 ano_atual
 
-
-# In[ ]:
-
-
 ano_fabricacao
 
-
-# In[ ]:
-
-
 km_total
-
-
-# In[ ]:
-
 
 ano_atual, ano_fabricacao, km_total = 2019, 2003, 44410.0
 km_media = km_total / (ano_atual - ano_fabricacao)
@@ -361,89 +234,39 @@ km_media
 # - **None** - Representa a ausência de valor
 
 # ### Números
-
-# In[ ]:
-
-
 ano_atual = 2019
-
-
-# In[ ]:
-
-
 type(ano_atual)
-
-
-# In[ ]:
-
-
 km_total = 44410.0
-
-
-# In[ ]:
-
 
 type(km_total)
 
 
 # ### Booleanos
 
-# In[ ]:
-
-
 zero_km = True
-
-
-# In[ ]:
 
 
 type(zero_km)
 
 
-# In[ ]:
-
-
 zero_km = False
-
-
-# In[ ]:
 
 
 type(zero_km)
 
 
 # ### Strings
-
-# In[ ]:
-
-
 nome = 'Jetta Variant'
 nome
-
-
-# In[ ]:
-
 
 nome = "Jetta Variant"
 nome
 
-
-# In[ ]:
-
-
 nome = 'Jetta "Variant"'
 nome
 
-
-# In[ ]:
-
-
 nome = "Jetta 'Variant'"
 nome
-
-
-# In[ ]:
-
 
 carro = '''
   Nome
@@ -452,22 +275,13 @@ carro = '''
 '''
 
 
-# In[ ]:
-
-
 type(carro)
 
 
 # ### None
 
-# In[ ]:
-
-
 quilometragem = None
 quilometragem
-
-
-# In[ ]:
 
 
 type(quilometragem)
@@ -475,53 +289,23 @@ type(quilometragem)
 
 # # 2.4 Conversão de tipos
 
-# In[ ]:
-
-
 a = 10
 b = 20
 c = 'Python é '
 d = 'legal'
 
 
-# In[ ]:
-
-
 type(a)
-
-
-# In[ ]:
-
 
 type(b)
 
-
-# In[ ]:
-
-
 type(c)
-
-
-# In[ ]:
-
 
 type(d)
 
-
-# In[ ]:
-
-
 a + b
 
-
-# In[ ]:
-
-
 c + d
-
-
-# In[ ]:
-
 
 # c + a
 
@@ -530,50 +314,20 @@ c + d
 # 
 # Funções int(), float(), str()
 
-# In[ ]:
-
-
 str(a)
-
-
-# In[ ]:
-
 
 type(str(a))
 
-
-# In[ ]:
-
-
 c + str(a)
-
-
-# In[ ]:
-
 
 float(a)
 
-
-# In[ ]:
-
-
 var = 3.141592
-
-
-# In[ ]:
-
 
 int(var)
 
 
-# In[ ]:
-
-
 var = 3.99
-
-
-# In[ ]:
-
 
 int(var)
 
@@ -583,9 +337,6 @@ int(var)
 # ### Indentação
 # 
 # Na linguagem Python os programas são estruturados por meio de indentação. Em qualquer linguagem de programação a prática da indentação é bastante útil, facilitando a leitura e também a manutenção do código. Em Python a indentação não é somente uma questão de organização e estilo, mas sim um requisito da linguagem.
-
-# In[ ]:
-
 
 ano_atual = 2019
 ano_fabricacao = 2019
@@ -602,16 +353,10 @@ else:
 # 
 # Podemos ter comentários de uma única linha ou de múltiplas linhas.
 
-# In[ ]:
-
 
 # Isto é um comentário
 ano_atual = 2019
 ano_atual
-
-
-# In[ ]:
-
 
 # Isto
 # é um 
@@ -620,16 +365,10 @@ ano_atual = 2019
 ano_atual
 
 
-# In[ ]:
-
-
 '''Isto é um
 comentário'''
 ano_atual = 2019
 ano_atual
-
-
-# In[ ]:
 
 
 # Definindo variáveis
@@ -652,20 +391,11 @@ else:                               # Testando se condição é falsa
 # 
 # https://docs.python.org/3.6/library/stdtypes.html#str.format
 
-# In[ ]:
-
 
 print('Olá, {}!'.format('Rodrigo'))
 
 
-# In[ ]:
-
-
 print('Olá, {}! Este é seu acesso de número {}'.format('Rodrigo', 32))
-
-
-# In[ ]:
-
 
 print('Olá, {nome}! Este é seu acesso de número {acessos}'.format(nome = 'Rodrigo', acessos = 32))
 
@@ -674,15 +404,8 @@ print('Olá, {nome}! Este é seu acesso de número {acessos}'.format(nome = 'Rod
 # 
 # https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings
 
-# In[ ]:
-
-
 nome = 'Rodrigo'
 acessos = 32
-
-
-# In[ ]:
-
 
 print(f'Olá, {nome}! Este é seu acesso de número {acessos}')
 
@@ -698,41 +421,22 @@ print(f'Olá, {nome}! Este é seu acesso de número {acessos}')
 # - Utilizando um par de colchetes com itens separados por vírgulas: [ 1, 2, 3 ]
 # ```
 
-# In[ ]:
-
-
 Acessorios = ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva']
 Acessorios
-
-
-# In[ ]:
-
 
 type(Acessorios)
 
 
 # ### Lista com tipos de dados variados
 
-# In[ ]:
-
-
 Carro_1 = ['Jetta Variant', 'Motor 4.0 Turbo', 2003, 44410.0, False, ['Rodas de liga', 'Travas elétricas', 'Piloto automático'], 88078.64]
 Carro_2 = ['Passat', 'Motor Diesel', 1991, 5712.0, False, ['Central multimídia', 'Teto panorâmico', 'Freios ABS'], 106161.94]
-
-
-# In[ ]:
 
 
 Carro_1
 
 
-# In[ ]:
-
-
 Carro_2
-
-
-# In[ ]:
 
 
 Carros = [Carro_1, Carro_2]
@@ -747,32 +451,13 @@ Carros
 # 
 # Retorna **True** se um elemento da lista *A* for igual a *x*.
 
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 'Rodas de liga' in Acessorios
 
-
-# In[ ]:
-
-
 '4 X 4' in Acessorios
 
-
-# In[ ]:
-
-
 'Rodas de liga' not in Acessorios
-
-
-# In[ ]:
-
 
 '4 X 4' not in Acessorios
 
@@ -781,27 +466,12 @@ Acessorios
 # 
 # Concatena as listas *A* e *B*.
 
-# In[ ]:
-
-
 A = ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro']
 B = ['Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva']
 
-
-# In[ ]:
-
-
 A
 
-
-# In[ ]:
-
-
 B
-
-
-# In[ ]:
-
 
 A + B
 
@@ -809,9 +479,6 @@ A + B
 # ## *len(A)*
 # 
 # Tamanho da lista A.
-
-# In[ ]:
-
 
 len(Acessorios)
 
@@ -824,56 +491,21 @@ len(Acessorios)
 # 
 # <font color=red>**Observação:**</font> Listas têm indexação com origem no zero.
 
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 Acessorios[0]
 
-
-# In[ ]:
-
-
 Acessorios[1]
-
-
-# In[ ]:
-
 
 Acessorios[-1]
 
-
-# In[ ]:
-
-
 Carros
-
-
-# In[ ]:
-
 
 Carros[0]
 
-
-# In[ ]:
-
-
 Carros[0][0]
 
-
-# In[ ]:
-
-
 Carros[0][-2]
-
-
-# In[ ]:
-
 
 Carros[0][-2][1]
 
@@ -882,26 +514,11 @@ Carros[0][-2][1]
 # 
 # Recorta a lista *A* do índice i até o j. Neste fatiamento o elemento com índice i é **incluído** e o elemento com índice j **não é incluído** no resultado.
 
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 Acessorios[2:5]
 
-
-# In[ ]:
-
-
 Acessorios[2:]
-
-
-# In[ ]:
-
 
 Acessorios[:5]
 
@@ -910,9 +527,6 @@ Acessorios[:5]
 # 
 # https://docs.python.org/3.6/library/stdtypes.html#mutable-sequence-types
 
-# In[ ]:
-
-
 Acessorios = ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva']
 
 
@@ -920,14 +534,7 @@ Acessorios = ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Banco
 # 
 # Ordena a lista *A*.
 
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 Acessorios.sort()
 Acessorios
@@ -936,9 +543,6 @@ Acessorios
 # ## *A.append(x)*
 # 
 # Adiciona o elemento *x* no final da lista *A*.
-
-# In[ ]:
-
 
 Acessorios.append('4 X 4')
 Acessorios
@@ -950,26 +554,11 @@ Acessorios
 # 
 # <font color=red>**Observação:**</font> Por *default* o método *pop()* remove e retorna o último elemento de uma lista.
 
-# In[ ]:
-
-
 Acessorios.pop()
-
-
-# In[ ]:
-
 
 Acessorios
 
-
-# In[ ]:
-
-
 Acessorios.pop(3)
-
-
-# In[ ]:
-
 
 Acessorios
 
@@ -983,61 +572,26 @@ Acessorios
 # A[:]
 # ```
 
-# In[ ]:
-
-
 Acessorios_2 = Acessorios
 Acessorios_2
-
-
-# In[ ]:
-
 
 Acessorios_2.append('4 X 4')
 Acessorios_2
 
-
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 Acessorios.pop()
 Acessorios
 
-
-# In[ ]:
-
-
 Acessorios_2
-
-
-# In[ ]:
-
 
 Acessorios_2 = Acessorios.copy()
 Acessorios_2
 
-
-# In[ ]:
-
-
 Acessorios_2.append('4 X 4')
 Acessorios_2
 
-
-# In[ ]:
-
-
 Acessorios
-
-
-# In[ ]:
-
 
 Acessorios_2 = Acessorios[:]
 Acessorios_2
@@ -1057,15 +611,8 @@ Acessorios_2
 
 # ### Loops com listas
 
-# In[ ]:
-
-
 Acessorios = ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva']
 Acessorios
-
-
-# In[ ]:
-
 
 for item in Acessorios:
   print(item)
@@ -1076,28 +623,14 @@ for item in Acessorios:
 # https://docs.python.org/3.6/tutorial/datastructures.html#list-comprehensions
 
 # *range()* -> https://docs.python.org/3.6/library/functions.html#func-range
-
-# In[ ]:
-
+ 
 
 range(10)
 
-
-# In[ ]:
-
-
 list(range(10))
-
-
-# In[ ]:
-
 
 for i in range(10):
   print(i ** 2)
-
-
-# In[ ]:
-
 
 quadrado = []
 for i in range(10):
@@ -1105,17 +638,10 @@ for i in range(10):
   
 quadrado
 
-
-# In[ ]:
-
-
 [i ** 2 for i in range(10)]
 
 
 # # 4.2 Loops aninhados
-
-# In[ ]:
-
 
 dados = [ 
     ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva'],
@@ -1124,24 +650,13 @@ dados = [
 ]
 dados
 
-
-# In[ ]:
-
-
 for lista in dados:
   print(lista)
-
-
-# In[ ]:
 
 
 for lista in dados:
   for item in lista:
     print(item)
-
-
-# In[ ]:
-
 
 Acessorios = []
 
@@ -1157,25 +672,14 @@ Acessorios
 # https://docs.python.org/3.6/library/stdtypes.html#types-set
 # 
 
-# In[ ]:
-
-
 list(set(Acessorios))
 
 
 # ### List comprehensions
 
-# In[ ]:
-
-
 [item for lista in dados for item in lista]
 
-
-# In[ ]:
-
-
 list(set([item for lista in dados for item in lista]))
-
 
 # # 4.3 Instrução *if*
 # 
@@ -1189,9 +693,6 @@ list(set([item for lista in dados for item in lista]))
 # ### Operadores de comparação: $==$, $!=$, $>$, $<$, $>=$, $<=$
 # ### e
 # ### Operadores lógicos: $and$, $or$, $not$
-
-# In[ ]:
-
 
 # 1º item da lista - Nome do veículo
 # 2º item da lista - Ano de fabricação
@@ -1211,10 +712,6 @@ dados = [
 ]
 dados
 
-
-# In[ ]:
-
-
 zero_km_Y = []
 
 for lista in dados:
@@ -1222,9 +719,6 @@ for lista in dados:
     zero_km_Y.append(lista)
     
 zero_km_Y
-
-
-# In[ ]:
 
 
 zero_km_N = []
@@ -1237,9 +731,6 @@ zero_km_N
 
 
 # ### List comprehensions
-
-# In[ ]:
-
 
 [lista for lista in dados if lista[2] == True]
 
@@ -1255,9 +746,6 @@ zero_km_N
 #     <instruções caso a condição não seja verdadeira>
 # ```
 
-# In[ ]:
-
-
 zero_km_Y, zero_km_N = [], []
 
 for lista in dados:
@@ -1266,15 +754,7 @@ for lista in dados:
   else:
     zero_km_N.append(lista)
 
-
-# In[ ]:
-
-
 zero_km_Y
-
-
-# In[ ]:
-
 
 zero_km_N
 
@@ -1295,14 +775,7 @@ zero_km_N
 #     <instruções caso as condições anteriores não sejam verdadeiras>
 # ```
 
-# In[ ]:
-
-
 dados
-
-
-# In[ ]:
-
 
 print('AND')
 print(f'(True and True) o resultado é: {True and True}')
@@ -1310,19 +783,11 @@ print(f'(True and False) o resultado é: {True and False}')
 print(f'(False and True) o resultado é: {False and True}')
 print(f'(False and False) o resultado é: {False and False}')
 
-
-# In[ ]:
-
-
 print('OR')
 print(f'(True or True) o resultado é: {True or True}')
 print(f'(True or False) o resultado é: {True or False}')
 print(f'(False or True) o resultado é: {False or True}')
 print(f'(False or False) o resultado é: {False or False}')
-
-
-# In[ ]:
-
 
 A, B, C = [], [], []
 
@@ -1334,26 +799,11 @@ for lista in dados:
   else:
     C.append(lista)
 
-
-# In[ ]:
-
-
 A
-
-
-# In[ ]:
-
 
 B
 
-
-# In[ ]:
-
-
 C
-
-
-# In[ ]:
 
 
 A, B, C = [], [], []
@@ -1399,52 +849,30 @@ for lista in dados:
 
 # ### Importando todo o pacote
 
-# In[ ]:
-
-
 import numpy
 
 
 # https://numpy.org/doc/1.16/reference/generated/numpy.arange.html
-
-# In[ ]:
-
 
 numpy.arange(10)
 
 
 # ### Importando todo o pacote e atribuindo um novo nome 
 
-# In[ ]:
-
 
 import numpy as np
-
-
-# In[ ]:
-
 
 np.arange(10)
 
 
 # ### Importando parte do pacote
 
-# In[ ]:
-
-
 from numpy import arange
-
-
-# In[ ]:
-
 
 arange(10)
 
 
 # # 5.1 Criando arrays Numpy
-
-# In[ ]:
-
 
 import numpy as np
 
@@ -1453,28 +881,13 @@ import numpy as np
 # 
 # https://numpy.org/doc/1.16/user/basics.creation.html
 
-# In[ ]:
-
-
 km = np.array([1000, 2300, 4987, 1500])
-
-
-# In[ ]:
-
 
 km
 
-
-# In[ ]:
-
-
 type(km)
 
-
 # https://numpy.org/doc/1.16/user/basics.types.html
-
-# In[ ]:
-
 
 km.dtype
 
@@ -1483,28 +896,14 @@ km.dtype
 # 
 # https://numpy.org/doc/1.16/reference/generated/numpy.loadtxt.html
 
-# In[ ]:
-
-
 km = np.loadtxt(fname = 'carros-km.txt', dtype = int)
 
-
-# In[ ]:
-
-
 km
-
-
-# In[ ]:
-
 
 km.dtype
 
 
 # ### Arrays com duas dimensões
-
-# In[ ]:
-
 
 dados = [ 
     ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva'],
@@ -1513,53 +912,22 @@ dados = [
 ]
 dados
 
-
-# In[ ]:
-
-
 Acessorios = np.array(dados)
-
-
-# In[ ]:
-
 
 Acessorios
 
-
-# In[ ]:
-
-
 km.shape
-
-
-# In[ ]:
-
 
 Acessorios.shape
 
 
 # ### Comparando desempenho com listas
 
-# In[ ]:
-
-
 np_array = np.arange(1000000)
-
-
-# In[ ]:
-
 
 py_list = list(range(1000000))
 
-
-# In[ ]:
-
-
 get_ipython().run_line_magic('time', 'for _ in range(100): np_array *= 2')
-
-
-# In[ ]:
-
 
 get_ipython().run_line_magic('time', 'for _ in range(100): py_list = [x * 2 for x in py_list]')
 
@@ -1568,33 +936,17 @@ get_ipython().run_line_magic('time', 'for _ in range(100): py_list = [x * 2 for 
 
 # ### Operações entre arrays e constantes
 
-# In[ ]:
-
-
 km = [44410., 5712., 37123., 0., 25757.]
 anos = [2003, 1991, 1990, 2019, 2006]
 
-
-# In[ ]:
-
-
 # idade = 2019 - anos
-
-
-# In[ ]:
 
 
 km = np.array([44410., 5712., 37123., 0., 25757.])
 anos = np.array([2003, 1991, 1990, 2019, 2006])
 
 
-# In[ ]:
-
-
 idade = 2019 - anos
-
-
-# In[ ]:
 
 
 idade
@@ -1602,45 +954,25 @@ idade
 
 # ### Operações entre arrays
 
-# In[ ]:
-
 
 km_media = km / idade
-
-
-# In[ ]:
-
 
 km_media
 
 
-# In[ ]:
-
-
 44410 / (2019 - 2003)
-
-
-# In[ ]:
-
 
 5712 / (2019 - 1991)
 
 
 # ### Operações com arrays de duas dimensões
 
-# In[ ]:
-
-
 dados = np.array([km, anos])
 
 
 # In[228]:
 
-
 dados
-
-
-# In[ ]:
 
 
 dados.shape
@@ -1648,26 +980,12 @@ dados.shape
 
 # ![1410-img01.png](https://caelum-online-public.s3.amazonaws.com/1410-pythondatascience/01/1410-img01.png)
 
-# In[ ]:
-
 
 dados[0]
 
-
-# In[ ]:
-
-
 dados[1]
 
-
-# In[ ]:
-
-
 km_media = dados[0] / (2019 - dados[1])
-
-
-# In[ ]:
-
 
 km_media
 
@@ -1964,10 +1282,6 @@ contador.reshape((5, 2), order='C')
 
 contador.reshape((5, 2), order='F')
 
-
-# In[ ]:
-
-
 km = [44410, 5712, 37123, 0, 25757]
 anos = [2003, 1991, 1990, 2019, 2006]
 
@@ -2000,10 +1314,6 @@ np.array(info_carros).reshape((5, 2), order='F')
 
 dados_new = dados.copy()
 dados_new
-
-
-# In[ ]:
-
 
 dados_new.resize((3, 5), refcheck=False)
 
@@ -2038,9 +1348,6 @@ dados_new
 # 
 # https://numpy.org/doc/1.16/reference/routines.math.html
 
-# In[ ]:
-
-
 anos = np.loadtxt(fname = "carros-anos.txt", dtype = int)
 km = np.loadtxt(fname = "carros-km.txt")
 valor = np.loadtxt(fname = "carros-valor.txt")
@@ -2053,9 +1360,6 @@ anos.shape
 
 
 # https://numpy.org/doc/1.16/reference/generated/numpy.column_stack.html
-
-# In[ ]:
-
 
 dataset = np.column_stack((anos, km, valor))
 dataset
@@ -2075,10 +1379,6 @@ dataset.shape
 
 
 np.mean(dataset, axis = 0)
-
-
-# In[ ]:
-
 
 np.mean(dataset, axis = 1)
 
